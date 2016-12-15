@@ -9,9 +9,5 @@ export const views$ = (superstream) => {
 }
 
 export const images$ = (superstream) => {
-  return superstream.filterForActionTypes(['FETCH_IMAGES', 'REQUEST_IMAGES', 'REQUEST_ABORT'])
-}
-
-export const likes$ = (superstream) => {
-  return superstream.filterForActionTypes(['ADD_LIKES'])
+  return superstream.filterForActionTypes(['FETCH_IMAGES', 'REQUEST_IMAGES', 'REQUEST_ABORT', 'ADD_LIKES'])
 }

@@ -20,7 +20,6 @@ class Login extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
     <div className='loginContainer' style={{backgroundImage: `url('./background.jpg')`}}>
       <form>
