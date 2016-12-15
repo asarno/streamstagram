@@ -15,7 +15,7 @@ class Home extends Component {
 
   render() {
     const images = this.props.images
-    ? this.props.images.map((image) => <Photo url={image.url} id={image.id} likes={image.likes}/>)
+    ? this.props.images.map((image) => <Photo key={image.id} url={image.url} id={image.id} likes={image.likes}/>)
     : <div>'no images'</div>
     return (
       <div>
