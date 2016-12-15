@@ -1,9 +1,14 @@
 import React, { Component } from 'react'
+import { reactiveComponent } from 'omnistream'
 
-class Photo extends Component {
-  render() {
-    <div>Photo</div>
-  }
+const Photo = ({ url, id, likes }) => {
+  return (
+    <div className='imgContainer'>
+      <div className='image'>
+        <img src={url} />
+      </div>
+    </div>
+  )
 }
 
-export default Photo
+export default reactiveComponent(Photo, 'imagesState$');

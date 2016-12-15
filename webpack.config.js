@@ -17,4 +17,9 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+    proxy: {
+      '/images': 'http://localhost:3000',
+    }
+  },
 };

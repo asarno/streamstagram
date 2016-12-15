@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { render } from 'react-dom'
 require('./styles/styles.css')
 import App from './components/App'
-import { StreamProvider, createSuperstream, createStore } from 'omnistream';
+import { StreamProvider, Timeline, createSuperstream, createStore } from 'omnistream';
 import { login$, views$, images$, likes$ } from './actions/actionStreams';
 import loginReducer from './reducers/loginReducer'
 import likesReducer from './reducers/likesReducer'
@@ -21,6 +21,6 @@ superstream.createStore(streamCollection);
 render((
   <StreamProvider superstream={superstream}>
     <App />
-    <div>'Hello World'</div>
+    <Timeline />
   </StreamProvider>
 ), document.getElementById('root'))

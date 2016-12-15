@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "url": "http://localhost:3000/1.jpg",
+    "likes": 37
+  },
+  {
+    "id": 2,
+    "url": "http://localhost:3000/2.jpg",
+    "likes": 42
+  },
+  {
+    "id": 3,
+    "url": "http://localhost:3000/3.jpg",
+    "likes": 43
+  },
+  {
+    "id": 4,
+    "url": "http://localhost:3000/4.jpg",
+    "likes": 43
+  },
+  {
+    "id": 5,
+    "url": "http://localhost:3000/5.jpg",
+    "likes": 43
+  },
+  {
+    "id": 6,
+    "url": "http://localhost:3000/6.jpg",
+    "likes": 43
+  }
+]

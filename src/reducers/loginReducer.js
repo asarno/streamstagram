@@ -9,8 +9,6 @@ const loginReducer = (state= initialState, action) => {
       return Object.assign({}, state, { username: action.text })
     case 'UPDATE_PASSWORD':
       return Object.assign({}, state, { password: action.text} )
-    case 'LOG_IN':
-      return Object.assign({}, state, { view: 'home' })
     default:
       return state
   }

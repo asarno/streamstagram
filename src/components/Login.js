@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
 import { reactiveComponent } from 'omnistream'
-import { username, password, login } from '../actions/actions'
+import { username, password, goHome } from '../actions/actions'
 
 class Login extends Component {
   constructor(props) {
     super(props);
     this.handleChange= this.handleChange.bind(this)
+    this.userLogin= this.userLogin.bind(this)
   }
 
   handleChange(e) {
@@ -13,16 +14,26 @@ class Login extends Component {
     if (e.target.id === 'password') this.props.dispatch(password(e.target.value))
   }
 
+  userLogin(e) {
+    e.preventDefault();
+    this.props.dispatch(goHome());
+  }
+
   render() {
     console.log(this.props)
     return (
-    <form>
-      <label>Username</label><input id='username' value={this.props.username} onChange={this.handleChange}/>
-      <label>Password</label><input id='password' value={this.props.password} onChange={this.handleChange}/>
-      <button>Sign In</button>
-    </form>
+    <div className='loginContainer' style={{backgroundImage: `url('./background.jpg')`}}>
+      <form>
+        <h1>streamstagram</h1>
+        <div className='formElems'>
+          <label>Username</label><input id='username' value={this.props.username} onChange={this.handleChange}/>
+          <label>Password</label><input id='password' type='password' value={this.props.password} onChange={this.handleChange}/>
+          <button onClick={this.userLogin}>Sign In</button>
+        </div>
+      </form>
+    </div>
     )
   }
 }
 
-export default reactiveComponent(Login, 'loginState$');
+export default reactiveComponent(Login, 'loginState$', 'viewsState$');
